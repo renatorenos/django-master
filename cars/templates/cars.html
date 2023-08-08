@@ -2,7 +2,11 @@
     <head>
         <title>Meus carros</title>
     </head>
-    <body>
-        <h1>Carros da PycodeBR</h1>
-    </body>
+    {% block content %}
+      <body>
+        {% for car in cars %}    
+          <h1>{{car.model}} - {{car.brand}}</h1>
+        {% endfor %}
+      </body>
+    {% endblock %}
   </html>
